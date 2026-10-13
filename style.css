@@ -27,7 +27,9 @@ h1 {
 .mac-controls{ 
     display: flex;
     gap: 6px;
-    align-items: center
+    align-items: center;
+    width: 60px; 
+    height: 20px;
 }
 
 .control{
@@ -35,8 +37,14 @@ h1 {
     height:12px;
     border-radius: 50%;
     display: in-line-block;
+    transition: transform 1s ease, filter 0.5s ease, opacity 0.5 ease; 
+}
+.control:hover{
+    filter: brightness(1.2);
+    transform: scale(1.16);
+    cursor:pointer;
 }
 
-.red{ background-color: red;}
-.yellow{background-color: yellow;}
+.red{ background-color: rgb(133, 0, 0);}
+.yellow{background-color: rgb(230, 184, 0);}
 .green{background-color: green;}
