@@ -54,7 +54,11 @@ body {
     position: relative;
 }
 
-
+.Footer{
+    background-color: #312e2d;
+    height: 20px;
+    position: relative;
+}
 
 .mac-controls{ 
     display: flex;
