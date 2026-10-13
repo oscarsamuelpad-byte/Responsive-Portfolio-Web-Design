@@ -1,0 +1,42 @@
+body {
+    background-color: #021526;
+    margin: 0px
+}
+
+h1 {
+    color: white;
+    font-family:monospace;
+    margin: 0;
+    margin-right: 52px;
+    font-size: 80%;
+    text-align: center;
+    flex-grow: 1;
+    
+}
+
+.Header{
+    background-color: #312e2d ;
+    height: 50px;
+    padding: 0 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mac-controls{ 
+    display: flex;
+    gap: 6px;
+    align-items: center
+}
+
+.control{
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    display: in-line-block;
+}
+
+.red{ background-color: red;}
+.yellow{background-color: yellow;}
+.green{background-color: green;}
