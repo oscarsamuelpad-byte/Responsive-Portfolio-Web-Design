@@ -1,36 +1,55 @@
 body {
     background-color: #021526;
+    height: 100%;
+    width:100%;
     margin: 0px
 }
 
+.Header{
+    background-color: #312e2d ;
+    height: 50px;
+    padding: 0 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
 
 .terminal-title {
     color: white;
     font-family: monospace;
-    margin: 0;
     margin-right: 52px;
     font-size: 14px;
-    text-align: center;
-    flex-grow: 1;
-    
+    flex-grow: 1; 
 }
 
-.Terminal{
-    font-family: monospace;
-    font-size: 14px;
-    padding: 10px;
-    max-width: 400px;
-    min-height: 450px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: justify;
+.Terminal-window {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 30 px black;
     display: flex;
     flex-direction: column;
 }
+.Terminal{
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px 5px;
+    max-width: 400px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: justify;
+    flex: 1; 
+    /* Takes up all available space between header and footer */
+    overflow-y: auto; 
+    /* Scroll inner content if text exceeds screen height */
+}
 .Terminal .textgreen {
     color: rgb(0, 189, 28);
-
 }
+
 .Terminal .textwhite{
     color: white;
 }
@@ -42,25 +61,23 @@ body {
 }
 .Terminal .textaqua {
     color:aquamarine
-
 }
 
 
 
-.Header{
-    background-color: #312e2d ;
-    height: 50px;
-    padding: 0 16px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
+
 
 .Footer{
     background-color: #312e2d;
-    height: 20px;
-    position: relative;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-family:monospace;
+    font-size:14px;
+    padding: 10px;
+    justify-content: space-between;
+    color: white
 }
 
 .mac-controls{ 
