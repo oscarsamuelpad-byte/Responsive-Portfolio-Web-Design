@@ -3,16 +3,46 @@ body {
     margin: 0px
 }
 
-h1 {
+
+.terminal-title {
     color: white;
-    font-family:monospace;
+    font-family: monospace;
     margin: 0;
     margin-right: 52px;
-    font-size: 80%;
+    font-size: 14px;
     text-align: center;
     flex-grow: 1;
     
 }
+
+.Terminal{
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+    max-width: 400px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+.Terminal .textgreen {
+    color: rgb(0, 189, 28);
+
+}
+.Terminal .textwhite{
+    color: white;
+}
+
+.Terminal .Ptextwhite{
+    color: white;
+    display:block;
+    margin-bottom: 24px;
+}
+.Terminal .textaqua {
+    color:aquamarine
+
+}
+
+
 
 .Header{
     background-color: #312e2d ;
@@ -23,6 +53,8 @@ h1 {
     align-items: center;
     position: relative;
 }
+
+
 
 .mac-controls{ 
     display: flex;
