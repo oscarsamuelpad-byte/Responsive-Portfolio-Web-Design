@@ -1,10 +1,12 @@
+
+/*---------------------body-----------------------*/
 body {
     background-color: #021526;
     height: 100%;
     width:100%;
     margin: 0px
 }
-
+/*-----------------Header stuff-------------------*/
 .Header{
     background-color: #312e2d ;
     height: 50px;
@@ -13,7 +15,6 @@ body {
     display: flex;
     align-items: center;
 }
-
 .terminal-title {
     color: white;
     font-family: monospace;
@@ -21,7 +22,7 @@ body {
     font-size: 14px;
     flex-grow: 1; 
 }
-
+/*---------------Terminal div stuff----------------*/
 .Terminal-window {
     width: 100vw;
     height: 100vh;
@@ -37,14 +38,13 @@ body {
     font-family: monospace;
     font-size: 14px;
     padding: 10px 5px;
-    max-width: 400px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     text-align: justify;
     flex: 1; 
     /* Takes up all available space between header and footer */
     overflow-y: auto; 
-    /* Scroll inner content if text exceeds screen height */
+    /* Scroll inner content if text exceeds screen height */    
 }
 .Terminal .textgreen {
     color: rgb(0, 189, 28);
@@ -62,7 +62,65 @@ body {
 .Terminal .textaqua {
     color:aquamarine
 }
+/*----------------The two terminal windows and its main (left and right)--------------*/
 
+.terminal-main{
+    display: flex;
+    justify-content: flex-start;
+    gap:40px;
+    margin-top: 10px;
+}
+
+.terminal-left{
+    flex: 1;
+    max-width: 100%;
+    text-align: justify;
+}
+
+.terminal-right{
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*-----------------------Project I've worked on! section--------------------------*/
+.project-box{
+    width: 100%;
+    margin-right: 30px;
+}
+
+.project-img{
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+
+}
+.project-title{
+    margin-top: 20px;
+    font-size: 14px;
+    color: aqua;
+    font-family: monospace;
+}
+.project-subtext{
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+    font-family: monospace;
+}
+
+@media(max-width: 768px){
+    .portfolio-content{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .terminal-left, .terminal-right{
+        max-width: 100%;
+    }
+}
+/*---------------------Footer-------------------------------*/
 .Footer{
     background-color: #312e2d;
     height: 40px;
@@ -75,7 +133,7 @@ body {
     justify-content: space-between;
     color: white
 }
-
+/*--------------------The mac buttons in the header------------------------*/
 .mac-controls{ 
     display: flex;
     gap: 6px;
@@ -96,7 +154,6 @@ body {
     transform: scale(1.16);
     cursor:pointer;
 }
-
 .red{ background-color: rgb(133, 0, 0);}
 .yellow{background-color: rgb(230, 184, 0);}
 .green{background-color: green;}
