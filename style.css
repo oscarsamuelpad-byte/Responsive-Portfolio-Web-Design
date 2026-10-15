@@ -112,12 +112,25 @@ body {
 }
 
 @media(max-width: 768px){
-    .portfolio-content{
+    .terminal-main{
+        display:flex;
         flex-direction: column;
-        gap: 20px;
     }
     .terminal-left, .terminal-right{
         max-width: 100%;
+
+    .about-me{
+        order:1;
+    }
+    .skills{
+        order:2;
+    }
+    .projects{
+        order:3;
+    }
+    .fun-facts{
+        order:4;
+    }
     }
 }
 /*---------------------Footer-------------------------------*/
@@ -132,6 +145,10 @@ body {
     padding: 10px;
     justify-content: space-between;
     color: white
+}
+
+.footer-text{
+    white-space: nowrap;
 }
 /*--------------------The mac buttons in the header------------------------*/
 .mac-controls{ 
