@@ -1,7 +1,7 @@
 # 📄 Personal Portfolio Website
 
 ## 📠 Project Overview
-A single-page responsive portfolio website created for a lab assignment in HCI. This website is made utilizing previous learned materials such as headers, footers, padding, sections, with the new topic of responsiveness in a website.
+A single-page responsive portfolio website created for a lab assignment in HCI. My portfolio is heavily inspired by the look of the linux or mac terminals and their "fastfetch" commands. This website is made utilizing previous learned materials such as headers, footers, padding, sections, with the new topic of responsiveness in a website.
 
 [🔗] Here are the links to the:
 - Website design: [I am the link, click me!](https://canva.link/ptjpv1m1pxruyou)
