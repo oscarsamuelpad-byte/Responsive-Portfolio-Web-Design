@@ -74,7 +74,7 @@ Responsive-Portfolio-Web-Design/
 
 ## 📷 Screenshots
 ![Image of Desktop Website](images/Portfolio-desktop.png)
-![Image of Mobile Website part 2](images/Portfolio-mobile-1.png)
+![Image of Mobile Website part 1](images/Portfolio-mobile-1.png)
 ![Image of Mobile Website part 2](images/Portfolio-mobile-2.png)
 
 
