@@ -2,62 +2,58 @@
 /*---------------------body-----------------------*/
 body {
     background-color: #021526;
-    height: 100%;
-    width:100%;
-    margin: 0px
+    height: 100%;/*100% of its parent*/
+    width:100%;/*full screen*/
+    margin: 0px;/* Removes default white browser margin around page */
 }
 /*-----------------Header stuff-------------------*/
 .Header{
     background-color: #312e2d ;
     height: 50px;
-    padding: 0 16px;
+    padding: 0 16px; /*left and right inside space*/
     text-align: center;
-    display: flex;
+    display: flex; /*header into flexbox container*/
     align-items: center;
 }
 .terminal-title {
     color: white;
     font-family: monospace;
-    margin-right: 52px;
+    margin-right: 52px; /* If i didnt use this, title would not be centered */
     font-size: 14px;
-    flex-grow: 1; 
+    flex-grow: 1; /* Rtitle container expand and take up remaining space */
 }
 /*---------------Terminal div stuff----------------*/
 .Terminal-window {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    min-height: 100%;
-    margin: 0;
-    overflow: hidden;
-    box-shadow: 0 10px 30 px black;
-    display: flex;
-    flex-direction: column;
+    width: 100vw; /*100% of viewport width*/
+    height: 100vh; /*100% of viewport height*/
+    max-width: 100%; /*so it doesnt go over 100%*/
+    margin: 0; /*so no "deadspace" around terminal window*/
+    overflow: hidden; /*hides outer scroll bar*/
+    display: flex; /*vertical flex container*/
+    flex-direction: column; /*stack header -> terminal body -> footer, vertically*/
 }
 .Terminal{
-    font-family: monospace;
-    font-size: 14px;
-    padding: 10px 5px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    font-family: monospace; /*so that all the text from .Terminal will be monospace*/
+    font-size: 14px; /*so that all text from .Terminal will be 14px*/
+    padding: 10px 5px; 
+    word-wrap: break-word; /*if not enough space, will be next line*/
+    overflow-wrap: break-word; /*"modern" text wrap alternative*/
     text-align: justify;
-    flex: 1; 
-    /* Takes up all available space between header and footer */
-    overflow-y: auto; 
-    /* Scroll inner content if text exceeds screen height */    
+    flex: 1; /* Takes up all available space between header and footer */
+    overflow-y: auto; /* Scroll inner content if text exceeds screen height */    
 }
 .Terminal .textgreen {
     color: rgb(0, 189, 28);
 }
 
 .Terminal .textwhite{
-    color: white;
+    color: white; /*I made 2 textwhites because one is just for the colour and one has spacing features*/
 }
 
 .Terminal .Ptextwhite{
     color: white;
-    display:block;
-    margin-bottom: 24px;
+    display:block; /*so there will be space for the terminal*/
+    margin-bottom: 24px; /*make it so that there is a one line skip*/
 }
 .Terminal .textaqua {
     color:aquamarine
@@ -65,60 +61,58 @@ body {
 /*----------------The two terminal windows and its main (left and right)--------------*/
 
 .terminal-main{
-    display: flex;
-    justify-content: flex-start;
-    gap:40px;
+    display: flex; /*side-by-side flex row*/
+    justify-content: flex-start; /*aligns column left-right, starting with left*/
+    gap:40px; /*added so gap between left and right remains 40px even when expanded or minimized webpage*/
     margin-top: 10px;
 }
 
 .terminal-left{
-    flex: 1;
-    max-width: 100%;
+    flex: 1; /*allows left side to stretch and balance space*/
+    max-width: 100%; /* so it doesnt break and cannot reach above 100%*/
     text-align: justify;
 }
 
 .terminal-right{
-    flex: 1;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 1;/*right side to stretch and balance space*/
+    max-width: 100%; /*same thing as all other max-width stuff, so it doesnt break*/
+    display: flex; /*right column into flex container*/
+    flex-direction: column; /*stack project title->project stuff vertically*/
+    align-items: center; /*Horizontally centers items inside the column*/
 }
 
 /*-----------------------Project I've worked on! section--------------------------*/
 .project-box{
-    width: 100%;
+    width: 100%; /*fill 100% of parent*/
     margin-right: 30px;
 }
 
 .project-img{
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
+    width: 100%; /*scale img width to 100% of container*/
+    height: auto; /*auto height to size of webpage*/
+    max-height: 400px; /*so if web page is massive, image wont be super massive*/
+    object-fit: contain; /*so no crop is done*/
 
 }
 .project-title{
-    margin-top: 20px;
     font-size: 14px;
     color: aqua;
     font-family: monospace;
 }
 .project-subtext{
-    margin-top: 20px;
     font-size: 14px;
     color: white;
     font-family: monospace;
 }
-
+/*----------------Mobile compatibility---------------*/
 @media(max-width: 768px){
     .terminal-main{
         display:flex;
-        flex-direction: column;
+        flex-direction: column; /*side by side becomes vertical so that it matches the requirement from design phase*/
     }
     .terminal-left, .terminal-right{
-        max-width: 100%;
-
+        max-width: 100%; /*forces column to take up 100% width on small screens*/
+    }
     .about-me{
         order:1;
     }
@@ -131,7 +125,6 @@ body {
     .fun-facts{
         order:4;
     }
-    }
 }
 /*---------------------Footer-------------------------------*/
 .Footer{
@@ -139,37 +132,34 @@ body {
     height: 40px;
     display:flex;
     align-items: center;
-    flex-shrink: 0;
+    flex-shrink: 0; /*prevents footer from shrinking or squishing*/
     font-family:monospace;
     font-size:14px;
     padding: 10px;
-    justify-content: space-between;
-    color: white
+    justify-content: space-between; /*left, right, center*/
+    color: white;
+    white-space: nowrap; /*so text will not form new line when web page is small*/
 }
 
-.footer-text{
-    white-space: nowrap;
-}
 /*--------------------The mac buttons in the header------------------------*/
 .mac-controls{ 
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    width: 60px; 
-    height: 20px;
+    display: flex; /*dots in a row*/
+    gap: 6px; /*so that gaps will form between circles*/
+    align-items: center; /*vertically centers dots*/
+    width: 60px; /*fixed width*/
+    height: 20px; /*fixed height*/
 }
-
 .control{
     width:12px;
     height:12px;
-    border-radius: 50%;
-    display: in-line-block;
-    transition: transform 1s ease, filter 0.5s ease, opacity 0.5 ease; 
+    border-radius: 50%; /*square to circle dots*/
+    display: inline-block; /*allows them to sit side by side*/
+    transition: transform 1s ease, filter 0.5s ease, opacity 0.5 ease;  /*smooth transition to new state*/
 }
 .control:hover{
-    filter: brightness(1.2);
-    transform: scale(1.16);
-    cursor:pointer;
+    filter: brightness(1.2); /*brightness increases when hovered*/
+    transform: scale(1.16); /*increases in size from center*/
+    cursor:pointer; /*changes cursor pointer to a clicking hand*/
 }
 .red{ background-color: rgb(133, 0, 0);}
 .yellow{background-color: rgb(230, 184, 0);}
