@@ -25,10 +25,9 @@ body {
 /*---------------Terminal div stuff----------------*/
 .Terminal-window {
     width: 100vw; /*100% of viewport width*/
-    height: 100vh; /*100% of viewport height*/
+    min-height: 100vh; /*added so footer mobile functionality can work*/
     max-width: 100%; /*so it doesnt go over 100%*/
     margin: 0; /*so no "deadspace" around terminal window*/
-    overflow: hidden; /*hides outer scroll bar*/
     display: flex; /*vertical flex container*/
     flex-direction: column; /*stack header -> terminal body -> footer, vertically*/
 }
@@ -104,28 +103,6 @@ body {
     color: white;
     font-family: monospace;
 }
-/*----------------Mobile compatibility---------------*/
-@media(max-width: 768px){
-    .terminal-main{
-        display:flex;
-        flex-direction: column; /*side by side becomes vertical so that it matches the requirement from design phase*/
-    }
-    .terminal-left, .terminal-right{
-        max-width: 100%; /*forces column to take up 100% width on small screens*/
-    }
-    .about-me{
-        order:1;
-    }
-    .skills{
-        order:2;
-    }
-    .projects{
-        order:3;
-    }
-    .fun-facts{
-        order:4;
-    }
-}
 /*---------------------Footer-------------------------------*/
 .Footer{
     background-color: #312e2d;
@@ -164,3 +141,48 @@ body {
 .red{ background-color: rgb(133, 0, 0);}
 .yellow{background-color: rgb(230, 184, 0);}
 .green{background-color: green;}
+
+/*----------------Mobile compatibility---------------*/
+@media(max-width: 768px){
+    html, body{
+        height:auto;
+        overflow: auto;
+    }
+    .Terminal-window{
+        height:auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+    .Terminal{
+        overflow-y: visible;
+        flex:none;
+        height:auto;
+    }
+    .Footer{
+        flex-direction: column;
+        height: auto;
+        padding: 16px 10px 24px 10px;
+        gap: 8px;
+        align-items: center;
+        white-space: normal;
+    }
+    .terminal-main{
+        display:flex;
+        flex-direction: column; /*side by side becomes vertical so that it matches the requirement from design phase*/
+    }
+    .terminal-left, .terminal-right{
+        max-width: 100%; /*forces column to take up 100% width on small screens*/
+    }
+    .about-me{
+        order:1;
+    }
+    .skills{
+        order:2;
+    }
+    .projects{
+        order:3;
+    }
+    .fun-facts{
+        order:4;
+    }
+}
