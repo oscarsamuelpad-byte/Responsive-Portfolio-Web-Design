@@ -1,4 +1,4 @@
-
+/*Beforehand, i just want to say I write notes for the sake of learning and remembering, thanks!*/
 /*---------------------body-----------------------*/
 body {
     background-color: #021526;
@@ -145,26 +145,26 @@ body {
 /*----------------Mobile compatibility---------------*/
 @media(max-width: 768px){
     html, body{
-        height:auto;
-        overflow: auto;
+        height:auto;/*removes page height constraint*/
+        overflow: auto;/*natural whole page scroll*/
     }
     .Terminal-window{
-        height:auto;
-        min-height: 100vh;
-        overflow: visible;
+        height:auto;/*allow outer window container to expand vertically*/
+        min-height: 100vh; /*covers minimum of full screen height*/
+        overflow: visible;/*prevents overflow of content*/
     }
     .Terminal{
-        overflow-y: visible;
-        flex:none;
-        height:auto;
+        overflow-y: visible; /*removes internal scrollbar box*/
+        flex:none; /*removes desktop flex-grow stretch*/
+        height:auto; /*natural height*/
     }
     .Footer{
-        flex-direction: column;
-        height: auto;
-        padding: 16px 10px 24px 10px;
-        gap: 8px;
-        align-items: center;
-        white-space: normal;
+        flex-direction: column; /*vertical stack of contents in footer*/
+        height: auto; /*footer growing to acommodate 3 lines*/
+        padding: 16px 10px 24px 10px; /*Generous footer space*/
+        gap: 8px; /*Gap in between items*/
+        align-items: center; /*Horizontally centers text items*/
+        white-space: normal; /*overrides global nowrap. text wrap and stacks clean*/
     }
     .terminal-main{
         display:flex;
@@ -185,4 +185,4 @@ body {
     .fun-facts{
         order:4;
     }
-}
+} /*Media is at the bottom so that everything is able to be called by the media*/
