@@ -71,6 +71,7 @@ Responsive-Portfolio-Web-Design/
 - I used Google's Gemini AI to help me structure the HTML layout and fix multiple CSS bugs, while also using the AI to explain concepts that are either new or concepts I forgot.
 - I designed the color scheme and layout myself Canva.
 - I wrote the project descriptions and contact section manually.
+- I understand what's in my HTML and CSS code.
 
 ## 📷 Screenshots
 ![Image of Desktop Website](images/Portfolio-desktop.png)
