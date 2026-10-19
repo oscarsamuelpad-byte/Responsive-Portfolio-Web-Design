@@ -142,6 +142,22 @@ body {
 .yellow{background-color: rgb(230, 184, 0);}
 .green{background-color: green;}
 
+/*---------------------Blinking Terminal Cursor-------------------------------*/
+.cursor {
+    color: white; 
+    font-weight: bold;
+    animation: blink 1s infinite steps(1);
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Cursor when fully visible */
+    }
+    50% {
+        opacity: 0; /* Cursor when completely hidden */
+    }
+}
+
 /*----------------Mobile compatibility---------------*/
 @media(max-width: 768px){
     html, body{
