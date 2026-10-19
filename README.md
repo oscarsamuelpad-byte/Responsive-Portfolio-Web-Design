@@ -25,10 +25,12 @@ The goal of this project is to:
 The website I have made includes sections such as:
 
 - **Header** - "Mac" buttons that showcase a hover functionality, with my name in the center.
+- **Opening line** - To play in theme with the portfolio being a terminal.
 - **About Me** - A description to introduce myself to others.
 - **My Skills** - A description about my skills and what I can offer to my employers/peers.
 - **Fun Facts** - 2 fun facts to get to know me more.
 - **Projects I've worked on!** - An image showcase of my works, with a subtext describing what it is.
+- **Closing line** - To play in theme with the portfolio being a terminal and showcase animations into the portfolio.
 - **Footer** - 3 sections showcasing my number, BINUS email, and Github username for my peers or potential employers to contact me.
 
 ## 📱 Responsiveness
