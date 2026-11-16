@@ -203,6 +203,14 @@ body {
     z-index: 100;
 }
 
+.ascii-art {
+    color: var(--accent, aquamarine);
+    font-family: monospace;
+    line-height: 1.2;
+    margin: 16px 0;
+    text-align: left;
+}
+
 .modal-overlay[hidden] {
     display: none; /* display:flex above would otherwise override the hidden attribute */
 }

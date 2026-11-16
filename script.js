@@ -74,10 +74,10 @@ const commands = {
         "  echo       repeat whatever you type after it",
         "  clear      clear the screen",
     ],
-    about: () => [
-        "Hi! I'm Oscar, a 1st year Computer Science student at BINUS International.",
-        "I love talking about tech, and I enjoy facing challenges head on.",
-    ],
+    about: () => {
+        openAbout();
+        return ["Opening about window..."];
+    },
     skills: () => [
         "Coding: Python, HTML, CSS",
         "Outside CS: public speaking, critical thinking (Model United Nations)",
@@ -180,6 +180,31 @@ input.addEventListener("keydown", (e) => {
 terminalBody.addEventListener("click", () => input.focus());
 
 const modal = document.getElementById("projects-modal");
+const aboutModal = document.getElementById("about-modal");
+
+function openProjects() { modal.hidden = false; }
+function openAbout()    { aboutModal.hidden = false; }
+
+function closeAll() {
+    modal.hidden = true;
+    aboutModal.hidden = true;
+    input.focus(); // hand the cursor back to the prompt
+}
+
+document.getElementById("modal-close").addEventListener("click", closeAll);
+document.getElementById("about-close").addEventListener("click", closeAll);
+
+// Click on the dark backdrop (but not the window itself) closes it
+[modal, aboutModal].forEach((m) => {
+    m.addEventListener("click", (e) => {
+        if (e.target === m) closeAll();
+    });
+});
+
+// Esc closes whichever is open
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && (!modal.hidden || !aboutModal.hidden)) closeAll();
+});
 
 function openProjects() {
     modal.hidden = false;

@@ -117,6 +117,45 @@
             </div>
         </div>
     </div>
+
+        <!-- About popup (hidden until the 'about' command runs) -->
+    <div id="about-modal" class="modal-overlay" hidden>
+        <div class="modal-window" role="dialog" aria-label="About me">
+            <header class="Header">
+                <div class="mac-controls">
+                    <span class="control red" id="about-close" title="Close"></span>
+                    <span class="control yellow"></span>
+                    <span class="control green"></span>
+                </div>
+                <span class="terminal-title">about.sh</span>
+            </header>
+
+            <div class="modal-body Terminal">
+                <div class="terminal-line">
+                    <span class="textgreen">oscar.padiman:</span>
+                    <span class="textwhite">~$ cat about.txt</span>
+                </div>
+
+    <pre class="ascii-art">
+        .-"""""-.
+    .'  _   _  '.
+    /   (o) (o)   \
+    |      ^      |
+    \   \_____/   /
+    '.         .'
+        '-.....-'
+        OSCAR
+    </pre>
+
+                <span class="Ptextwhite">Hi! I am Oscar, having just graduated from high school, I am currently a 1st year student in BINUS International, and am majoring in Computer Science! ... (paste the rest of your text)</span>
+
+                <div class="terminal-line modal-hint">
+                    <span class="textwhite">Press Esc or click the red dot to close.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         const toggle = document.getElementById("theme-toggle");
 
