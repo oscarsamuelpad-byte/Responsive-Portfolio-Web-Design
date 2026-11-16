@@ -1,7 +1,7 @@
 # 📄 Personal Portfolio Website
 
 ## 📠 Project Overview
-A single-page responsive portfolio website created for a lab assignment in HCI. My portfolio is heavily inspired by the look of the linux or mac terminals and their "fastfetch" commands. This website is made utilizing previous learned materials such as headers, footers, padding, sections, with the new topic of responsiveness in a website.
+A single-page responsive portfolio website created for a lab assignment in HCI. My portfolio is heavily inspired by the look of the linux or mac terminals and their "fastfetch" commands. This website is made utilizing previous learned materials such as headers, footers, padding, sections, css, and javascript with the topic of responsiveness in mind.
 
 [🔗] Here are the links to the:
 - Website design: [I am the link, click me!](https://canva.link/ptjpv1m1pxruyou)
@@ -12,6 +12,7 @@ The goal of this project is to:
 - TO create a portfolio that represents my skills and I.
 - TO have a way to display the work I've done through the portfolio.
 - TO practice responsive web designs and previous taught materials from HCI Lab through HTML and CSS and have a productive output from it.
+- TO practice the use of javascript in my works
 
 ## 👀 Target audience:
 - [✅] Potential employers
@@ -20,17 +21,19 @@ The goal of this project is to:
 ## 🖥️ Technologies used:
 - HTML5
 - CSS3 (Flexbox, Box Models, Media Queries)
+- JavaScript
+
 
 ## 📐 Layout & Sections
 The website I have made includes sections such as:
 
 - **Header** - "Mac" buttons that showcase a hover functionality, with my name in the center.
 - **Opening line** - To play in theme with the portfolio being a terminal.
-- **About Me** - A description to introduce myself to others.
+- **About Me** - A description to introduce myself to others. Could be displayed in a popup.
 - **My Skills** - A description about my skills and what I can offer to my employers/peers.
 - **Fun Facts** - 2 fun facts to get to know me more.
-- **Projects I've worked on!** - An image showcase of my works, with a subtext describing what it is.
-- **Closing line** - To play in theme with the portfolio being a terminal and showcase animations into the portfolio.
+- **Projects I've worked on!** - An image showcase of my works, with a subtext describing what it is, all displayed in the popup.
+- **Prompt text space** - To play in theme with the portfolio being a terminal and showcase animations while also making the website responsive.
 - **Footer** - 3 sections showcasing my number, BINUS email, and Github username for my peers or potential employers to contact me.
 
 ## 📱 Responsiveness
@@ -60,6 +63,7 @@ Responsive-Portfolio-Web-Design/
 │
 ├── index.html
 ├── style.css
+├── script.js
 ├── images/
 │   ├── projectsample.png
 │   ├── Portfolio-mobile-1.png
@@ -70,7 +74,7 @@ Responsive-Portfolio-Web-Design/
 
 ## 📝 Notes
 
-- I used Google's Gemini AI to help me structure the HTML layout and fix multiple CSS bugs, while also using the AI to explain concepts that are either new or concepts I forgot.
+- I used Google's Gemini AI and Claude's Sonnet 5.5 Medium to help me structure the HTML layout, generate the JavaScript and fix multiple CSS bugs, while also using the AI to explain concepts that are either new or concepts I forgot.
 - I designed the color scheme and layout myself Canva.
 - I wrote the project descriptions and contact section manually.
 - I understand what's in my HTML and CSS code.
