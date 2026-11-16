@@ -79,18 +79,17 @@
             </div>
 
             <div class="terminal-line">
-                <span class="Ptextwhite">----------------------------------------</span>
+                <span class="textwhite">Type 'help' to see what you can do.</span>
             </div>
-            <div class="terminal-line">
+
+            <!-- Command results get added here -->
+            <div id="output"></div>
+
+            <!-- The live prompt -->
+            <div class="terminal-line prompt-line">
                 <span class="textgreen">oscar.padiman:</span>
-                <span class="textwhite">~$ portfolio --close</span>
-            </div>
-            <div class="terminal-line">
-                <span class="textwhite">http server at 127.0.0.1:50908 closed.</span>
-            </div>
-            <div class="terminal-line">
-                <span class="textgreen">oscar.padiman:</span>
-                <span class="cursor">|</span>
+                <span class="textwhite">~$</span>
+                <input id="terminal-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input">
             </div>
         </div>
         

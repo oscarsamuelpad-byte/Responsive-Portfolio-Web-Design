@@ -166,20 +166,29 @@ body {
 .yellow{background-color: rgb(230, 184, 0);}
 .green{background-color: green;}
 
-/*---------------------Blinking Terminal Cursor-------------------------------*/
-.cursor {
-    color: var(--text, white); 
-    font-weight: bold;
-    animation: blink 1s infinite steps(1);
+/*---------------------Interactive prompt-------------------------------*/
+.prompt-line {
+    display: flex;
+    gap: 6px;
+    align-items: center;
 }
 
-@keyframes blink {
-    0%, 100% {
-        opacity: 1; /* Cursor when fully visible */
-    }
-    50% {
-        opacity: 0; /* Cursor when completely hidden */
-    }
+#terminal-input {
+    flex: 1;                 /* input fills the rest of the line */
+    background: transparent; /* looks like part of the terminal, not a form box */
+    border: none;
+    outline: none;
+    color: var(--text, white);
+    font-family: monospace;  /* inputs don't inherit font by default */
+    font-size: 14px;
+    caret-color: var(--green, rgb(0, 189, 28));
+    padding: 0;
+}
+
+.output-line {
+    color: var(--text, white);
+    white-space: pre-wrap;   /* keeps my spaces/indentation and wraps long lines */
+    text-align: left;        /* .Terminal is justified, which looks odd for output */
 }
 
 /*----------------Mobile compatibility---------------*/
