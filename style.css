@@ -1,14 +1,34 @@
 /*Beforehand, i just want to say I write notes for the sake of learning and remembering, thanks!*/
+:root {
+    --bg: #021526;
+    --bar-bg: #312e2d;
+    --text: white;
+    --green: rgb(0, 189, 28);
+    --accent: aquamarine;
+    --link: #6cb6ff;
+}
+
+body.light {
+    --bg: #f4f1ea;
+    --bar-bg: #d8d4cc;
+    --text: #1a1a1a;
+    --green: rgb(0, 120, 20);   /* darker so it's readable on light */
+    --accent: #007a63;          /* aquamarine is too pale on white */
+    --link: #0b5cad;
+}
+
+
 /*---------------------body-----------------------*/
 body {
-    background-color: #021526;
+    background-color: var(--bg, #021526);
     height: 100%;/*100% of its parent*/
     width:100%;/*full screen*/
     margin: 0px;/* Removes default white browser margin around page */
+    transition: background-color 0.3s ease;
 }
 /*-----------------Header stuff-------------------*/
 .Header{
-    background-color: #312e2d ;
+    background-color: var(--bar-bg, #312e2d) ;
     height: 50px;
     padding: 0 16px; /*left and right inside space*/
     text-align: center;
@@ -16,7 +36,7 @@ body {
     align-items: center;
 }
 .terminal-title {
-    color: white;
+    color: var(--text, white);
     font-family: monospace;
     margin-right: 52px; /* If i didnt use this, title would not be centered */
     font-size: 14px;
@@ -42,20 +62,20 @@ body {
     overflow-y: auto; /* Scroll inner content if text exceeds screen height */    
 }
 .Terminal .textgreen {
-    color: rgb(0, 189, 28);
+    color: var(--green, rgb(0, 189, 28));
 }
 
 .Terminal .textwhite{
-    color: white; /*I made 2 textwhites because one is just for the colour and one has spacing features*/
+    color: var(--text, white); /*I made 2 textwhites because one is just for the colour and one has spacing features*/
 }
 
 .Terminal .Ptextwhite{
-    color: white;
+    color: var(--text, white);
     display:block; /*so there will be space for the terminal*/
     margin-bottom: 24px; /*make it so that there is a one line skip*/
 }
 .Terminal .textaqua {
-    color:aquamarine
+    color: var(--accent, aquamarine);
 }
 /*----------------The two terminal windows and its main (left and right)--------------*/
 
@@ -95,17 +115,21 @@ body {
 }
 .project-title{
     font-size: 14px;
-    color: aqua;
+    color: var(--accent, aqua);
     font-family: monospace;
 }
 .project-subtext{
     font-size: 14px;
-    color: white;
+    color: var(--text, white);
     font-family: monospace;
+}
+
+.project-subtext a {
+    color: var(--link, #6cb6ff);
 }
 /*---------------------Footer-------------------------------*/
 .Footer{
-    background-color: #312e2d;
+    background-color: var(--bar-bg, #312e2d);
     height: 40px;
     display:flex;
     align-items: center;
@@ -114,7 +138,7 @@ body {
     font-size:14px;
     padding: 10px;
     justify-content: space-between; /*left, right, center*/
-    color: white;
+    color: var(--text, white);
     white-space: nowrap; /*so text will not form new line when web page is small*/
 }
 
@@ -144,7 +168,7 @@ body {
 
 /*---------------------Blinking Terminal Cursor-------------------------------*/
 .cursor {
-    color: white; 
+    color: var(--text, white); 
     font-weight: bold;
     animation: blink 1s infinite steps(1);
 }

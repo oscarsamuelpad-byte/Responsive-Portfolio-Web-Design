@@ -23,6 +23,7 @@
             </div>
             <!--Text has to go after circles, web left-right-->
             <span class="terminal-title">oscar.padiman</span> 
+            
         </header>
 
         <div class="Terminal">
@@ -99,5 +100,22 @@
             <span>🐱‍💻oscarsamuelpad-byte</span>
         </footer>
     </div>
+    <script>
+        const toggle = document.getElementById("theme-toggle");
+
+        // Restore the saved choice (if none saved, stays dark)
+        if (localStorage.getItem("theme") === "light") {
+            document.body.classList.add("light");
+            toggle.textContent = "dark";
+        }
+
+        toggle.addEventListener("click", () => {
+            const isLight = document.body.classList.toggle("light"); // adds/removes class, returns true if added
+            toggle.textContent = isLight ? "dark" : "light";
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+        });
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
