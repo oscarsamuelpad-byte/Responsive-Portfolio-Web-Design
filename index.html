@@ -63,19 +63,6 @@
                         </div>
                     </div>
                 </div>
-
-                 <div class="terminal-right">
-                    <div class="projects">
-                        <div class="terminal-line">
-                        <span class="project-title">Projects I've worked on!</span>
-                        </div>
-
-                        <div class="project-box">
-                            <img src="images/projectsample.png" alt="Photo Editing App"  class="project-img">
-                            <span class="project-subtext">Photo editing app coded in Python, utilizing tkinter, ttkbootstrap, and pillow! Here's the <a href="https://github.com/oscarsamuelpad-byte/Python-Image-Editor">Github link</a> to that!</span>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="terminal-line">
@@ -98,6 +85,37 @@
             <span>📧 oscar.padiman@binus.ac.id</span>
             <span>🐱‍💻oscarsamuelpad-byte</span>
         </footer>
+    </div>
+    <!-- Projects popup (hidden until the 'projects' command runs) -->
+    <div id="projects-modal" class="modal-overlay" hidden>
+        <div class="modal-window" role="dialog" aria-label="Projects">
+            <header class="Header">
+                <div class="mac-controls">
+                    <span class="control red" id="modal-close" title="Close"></span>
+                    <span class="control yellow"></span>
+                    <span class="control green"></span>
+                </div>
+                <span class="terminal-title">projects.sh</span>
+            </header>
+
+            <div class="modal-body Terminal">
+                <div class="terminal-line">
+                    <span class="textgreen">oscar.padiman:</span>
+                    <span class="textwhite">~$ ls projects/</span>
+                </div>
+
+                <div class="project-title">Projects I've worked on!</div>
+
+                <div class="project-box">
+                    <img src="images/projectsample.png" alt="Photo Editing App" class="project-img">
+                    <span class="project-subtext">Photo editing app coded in Python, utilizing tkinter, ttkbootstrap, and pillow! Here's the <a href="https://github.com/oscarsamuelpad-byte/Python-Image-Editor" target="_blank" rel="noopener">Github link</a> to that!</span>
+                </div>
+
+                <div class="terminal-line modal-hint">
+                    <span class="textwhite">Press Esc or click the red dot to close.</span>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
         const toggle = document.getElementById("theme-toggle");

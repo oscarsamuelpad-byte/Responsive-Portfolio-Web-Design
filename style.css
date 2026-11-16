@@ -191,6 +191,52 @@ body {
     text-align: left;        /* .Terminal is justified, which looks odd for output */
 }
 
+/*---------------------Projects popup-------------------------------*/
+.modal-overlay {
+    position: fixed;
+    inset: 0; /* shorthand for top/right/bottom/left: 0 */
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 100;
+}
+
+.modal-overlay[hidden] {
+    display: none; /* display:flex above would otherwise override the hidden attribute */
+}
+
+.modal-window {
+    width: 100%;
+    max-width: 700px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg, #021526);
+    border: 1px solid var(--bar-bg, #312e2d);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: modal-pop 0.2s ease;
+}
+
+.modal-body {
+    padding: 16px;
+    text-align: left;
+    overflow-y: auto; /* scroll inside the popup if content is tall */
+}
+
+.modal-hint {
+    margin-top: 16px;
+    opacity: 0.6;
+}
+
+@keyframes modal-pop {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
 /*----------------Mobile compatibility---------------*/
 @media(max-width: 768px){
     html, body{

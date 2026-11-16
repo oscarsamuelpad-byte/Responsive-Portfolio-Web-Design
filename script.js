@@ -82,10 +82,10 @@ const commands = {
         "Coding: Python, HTML, CSS",
         "Outside CS: public speaking, critical thinking (Model United Nations)",
     ],
-    projects: () => [
-        "1. Photo Editing App - Python (tkinter, ttkbootstrap, pillow)",
-        "   https://github.com/oscarsamuelpad-byte/Python-Image-Editor",
-    ],
+    projects: () => {
+        openProjects();
+        return ["Opening projects window..."];
+    },
     funfacts: () => [
         "⚽ I hosted an FC 25 tournament back in high school!",
         "🤖 I like to collect old consoles and tech!",
@@ -178,3 +178,26 @@ input.addEventListener("keydown", (e) => {
 
 // Clicking anywhere in the terminal focuses the prompt, like a real terminal
 terminalBody.addEventListener("click", () => input.focus());
+
+const modal = document.getElementById("projects-modal");
+
+function openProjects() {
+    modal.hidden = false;
+}
+
+function closeProjects() {
+    modal.hidden = true;
+    input.focus(); // hand the cursor back to the prompt
+}
+
+document.getElementById("modal-close").addEventListener("click", closeProjects);
+
+// Click on the dark backdrop (but not the window itself) closes it
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeProjects();
+});
+
+// Esc closes it
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.hidden) closeProjects();
+});
