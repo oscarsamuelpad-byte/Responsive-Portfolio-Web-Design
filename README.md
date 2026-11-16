@@ -66,9 +66,10 @@ Responsive-Portfolio-Web-Design/
 ├── script.js
 ├── images/
 │   ├── projectsample.png
-│   ├── Portfolio-mobile-1.png
-│   ├── Portfolio-mobile-2.png
-│   ├── Portfolio-desktop.png
+│   ├── Portfolio-mobile-1.jpeg
+│   ├── Portfolio-mobile-2.jpeg
+│   ├── Portfolio-desktop-1.jpeg
+│   ├── Portfolio-desktop-2.jpeg
 └── README.md
 ```
 
@@ -80,9 +81,10 @@ Responsive-Portfolio-Web-Design/
 - I understand what's in my HTML and CSS code.
 
 ## 📷 Screenshots
-![Image of Desktop Website](images/Portfolio-desktop.png)
-![Image of Mobile Website part 1](images/Portfolio-mobile-1.png)
-![Image of Mobile Website part 2](images/Portfolio-mobile-2.png)
+![Image of Desktop Website part 1](images/Portfolio-desktop-1.jpeg)
+![Image of Desktop Website part 2](images/Portfolio-dekstop-2.jpeg)
+![Image of Mobile Website part 1](images/Portfolio-mobile-1.jpeg)
+![Image of Mobile Website part 2](images/Portfolio-mobile-2.jpeg)
 ![Image of Portfolio Design in Canva](images/Portfolio-design.png)
 
 
